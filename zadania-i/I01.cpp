@@ -2,29 +2,29 @@
 using namespace std;
 
 int main() {
-	//Deklarujemy zmienn¹ "liczba"
-	float liczba;
+	//Deklarujemy zmiennÄ… "liczba"
+	float liczbaStartowa;
 
-	//Pytamy u¿ytkownika o liczbê
-	cout << "Podaj liczbe";
+	//Pytamy uÅ¼ytkownika o liczbÄ™
+	cout << "Podaj liczbe" << endl;
 	cin >> liczbaStartowa;
 
 	/*
-	Gdybym chcia³, móg³bym u¿yæ abs(liczba) z biblioteki cmath, jednak¿e ten rozdzia³ dotyczy konstrukcji if/else, wiêc:
+	Gdybym chciaÅ‚, mÃ³gÅ‚bym uÅ¼yÄ‡ abs(liczba) z biblioteki cmath, jednakÅ¼e ten rozdziaÅ‚ dotyczy konstrukcji if/else, wiÄ™c:
 	*/
 
-	//Obliczamy wartoœæ bezwzglêdn¹ liczby
-	float liczbaAbs
-	if (liczba < 0) {
-		//Je¿eli liczba jest ujemna, mno¿ymy przez -1
-		liczbaAbs = liczba * (-1);
+	//Obliczamy wartoÅ›Ä‡ bezwzglÄ™dnÄ… liczby
+	float liczbaAbs;
+	if (liczbaStartowa < 0) {
+		//JeÅ¼eli liczba jest ujemna, mnoÅ¼ymy przez -1
+		liczbaAbs = liczbaStartowa * (-1);
 	}
 	else {
-		//Je¿eli jest dodatnia, to zostawiamy tak jak jest
-		liczbaAbs = liczba;
+		//JeÅ¼eli jest dodatnia, to zostawiamy tak jak jest
+		liczbaAbs = liczbaStartowa;
 	}
 
-	//Wyœwietlamy u¿ytkownikowi wartoœæ absolutn¹ liczby	
-	cout << "Wartosc absolutna liczby " << liczba << " to " << liczbaAbs;
+	//WyÅ›wietlamy uÅ¼ytkownikowi wartoÅ›Ä‡ absolutnÄ… liczby	
+	cout << "Wartosc absolutna liczby " << liczbaStartowa << " to " << liczbaAbs << endl;
     return 0;
 }
