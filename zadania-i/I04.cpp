@@ -17,7 +17,7 @@ int main() {
     //Wyświetlamy użytkownikowi jego indeks BMI
     cout << "Twoja wartosc BMI to " << bmi << endl;
     
-    //Kod kt�ry napisa�em teraz
+    //Kod który napisałem teraz
     if (bmi < 18) {
     	cout << "Niedowaga" << endl;
 	} else if (bmi >= 18 && bmi <= 24) {
