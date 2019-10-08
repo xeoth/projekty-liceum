@@ -9,7 +9,7 @@ int main() {
     cout << "Podaj liczbe naturalna" << endl;
     cin >> liczba;
 
-    cout << "Liczba odwrotna liczby " << liczba << " to: ";
+    cout << "Liczba wspak: ";
 
     //odwracanie kolejnosci cyfr
     while (liczba > 0)
