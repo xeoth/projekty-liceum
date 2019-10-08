@@ -11,9 +11,7 @@ int main() {
 
     //wypisywanie dzielników
     cout << "Dzielniki liczby " << liczba << ":" << endl;
-    for (int i = 0; i < liczba; i++) {
-        cout << "got here";
-
+    for (int i = 1; i <= liczba; i++) {
         if (liczba % i == 0) {
             cout << i << " ";
         }
