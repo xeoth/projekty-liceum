@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-//TODO: Przejrzeć zgodność
 
 int main() {
 	int przyprostokatna, aktualna;
