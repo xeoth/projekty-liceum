@@ -14,8 +14,20 @@ bool czyPierwsza(int podana) {
     return isPrime;
 }
 
+int sumaCyfr(int podana) {
+    int returnValue = 0, ostatnia;
+    while (podana >= 1)
+    {
+        ostatnia = podana%10;
+        returnValue += ostatnia;
+        podana /= 10;
+    }
+    
+    return returnValue;
+}
+
 
 int main() {
-    
+
     return 0;
 }
