@@ -28,6 +28,11 @@ int sumaCyfr(int podana) {
 
 
 int main() {
-
+    for (int i = 1; i <= 100; i++)
+    {
+        if (czyPierwsza(i) == 1 && czyPierwsza(sumaCyfr(i)) == 1) 
+            cout << i << ' ';
+    }
+    
     return 0;
 }
