@@ -36,8 +36,6 @@ int main() {
     cout << sortedFalling[counter] << ' ';
     counter++;
   }
-  
-  
 
   return 0;
 }
