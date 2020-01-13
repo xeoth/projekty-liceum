@@ -20,7 +20,7 @@ int main() {
   cout << endl;
 
   cout << "Posortowana rosnaco" << endl;
-  int *sortedRising = bubbleSort(randomArray, 9);
+  int *sortedRising = bubbleSortRising(randomArray, 9);
   for (int k = 0; k < 9; k++)
   {
     cout << sortedRising[k] << ' ';
@@ -29,13 +29,12 @@ int main() {
   cout << endl;
 
   cout << "Posortowana malejaco" << endl;
-  int sortedFalling[9], counter = 0;
-  for (int l = 8; l > 0; l--)
+  int *sortedFalling = bubbleSortFalling(randomArray, 9);
+  for (int l = 0; l < 9; l++)
   {
-    sortedFalling[counter] = sortedRising[l];
-    cout << sortedFalling[counter] << ' ';
-    counter++;
+    cout << sortedFalling[k] << ' ';
   }
+  
 
   return 0;
 }

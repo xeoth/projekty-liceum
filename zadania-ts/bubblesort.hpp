@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int* bubbleSort(int* array, int len) {
+int* bubbleSortRising(int* array, int len) {
   for (int i = 0; i < len; i++)
   {
     for (int j = 0; j < len; j++)
@@ -14,4 +14,19 @@ int* bubbleSort(int* array, int len) {
     }
   }
   return array;
+}
+
+int* bubbleSortFalling(int* array, int len) {
+  int sorted = bubbleSortRising(array, len);
+  // Odwracanie tabeli
+  int counter = 0;
+  for (int k = 8; k > 0; k--)
+  {
+    sortedFalling[counter] = sortedRising[k];
+    cout << sortedFalling[counter] << ' ';
+    counter++;
+  }
+
+  return array;
+  
 }
