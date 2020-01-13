@@ -16,10 +16,12 @@ int* bubbleSortRising(int* array, int len) {
   return array;
 }
 
+
+//FIXME: Returns error
 int* bubbleSortFalling(int* array, int len) {
-  int sorted = bubbleSortRising(array, len);
+  int sortedRising = bubbleSortRising(array, len);
   // Odwracanie tabeli
-  int counter = 0;
+  int counter = 0, sortedFalling[len];
   for (int k = 8; k > 0; k--)
   {
     sortedFalling[counter] = sortedRising[k];
