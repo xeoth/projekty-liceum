@@ -32,7 +32,7 @@ int main() {
   int *sortedFalling = bubbleSortFalling(randomArray, 9);
   for (int l = 0; l < 9; l++)
   {
-    cout << sortedFalling[k] << ' ';
+    cout << sortedFalling[l] << ' ';
   }
   
 
