@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//FIXME: First value is always zero, doesn't show last value
 int* bubbleSortRising(int* array, const int len) {
   for (int i = 0; i < len; i++)
   {
