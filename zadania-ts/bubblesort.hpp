@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @param array Array of randomized numbers
+ * @param len Length of the array given on initialization
+ * @return Array of sorted numbers, from the lowest to highest
+*/
 int* bubbleSortRising(int* array, const int len) {
   for (int i = 0; i < len; i++)
   {
@@ -16,6 +21,11 @@ int* bubbleSortRising(int* array, const int len) {
   return array;
 }
 
+/**
+ * @param array Array of randomized numbers
+ * @param len Length of the array given on initialization
+ * @return Array of sorted numbers, from the highest to the lowest
+ */
 int* bubbleSortFalling(int* array, const int len) {
   for (int i = 0; i < len; i++)
   {
