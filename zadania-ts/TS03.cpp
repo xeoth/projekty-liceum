@@ -1,15 +1,6 @@
-// Po skończeniu tego zadania zrozumiałem, że Python jest o wiele lepszy i bardziej przejrzysty niż c++
-// W C++:
-// find(begin(tab), end(tab), x) != end(tab)
-// Działa tylko w określonych przypadkach, a okazuje się, że to zadanie do nich nie należy.
-// Dokumentacja begin i end, a także find jest kompletnie niezrozumiała.
-
-// W Pythonie:
-// if x in tab:
-// Działa w zasadzie w każdym przypadku, a sama składnia jest banalna.
-
-// Podsumowując: Python jest prostszy i nowszy, podczas, gdy C++ ma bardziej skomplikowaną składnię.
-// Więc, czemu nie przerzucimy się w całości na Pythona?
+// Bardziej zrozumiała i przejrzysta wersja w Pythonie:
+// https://ts03.xeoth.repl.run
+// kod: https://repl.it/@Xeoth/TS03
 
 #include <iostream>
 #include <cstdlib>
