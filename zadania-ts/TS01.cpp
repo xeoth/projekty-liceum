@@ -8,7 +8,7 @@ int main() {
   // Ustawienie seeda na czas
   srand(time(NULL));
 
-  cout << "Tablica pseudolosowych" << endl;
+  cout << "Tablica pseudolosowych\n";
   // Tworzenie i uzupełnienie tabeli
   int randomArray[10];
   for (int i = 0; i < 9; i++)
@@ -19,23 +19,22 @@ int main() {
 
   cout << '\n';
 
-  cout << "Posortowana rosnaco" << endl;
-  int *sortedRising = bubbleSortRising(randomArray, 9);
-  for (int k = 0; k < 9; k++)
+  cout << "Posortowana rosnaco\n";
+  bubbleSortRising(randomArray, 10);
+
+  for (int j = 0; j < 9; j++)
   {
-    cout << sortedRising[k] << ' ';
+    cout << randomArray[j] << ' ';
   }
 
-  cout << '\n';
+  cout << "\nPosortowana malejaco\n";
 
-  cout << "Posortowana malejaco" << endl;
-  int *sortedFalling = bubbleSortFalling(randomArray, 9);
-  for (int l = 1; l < 10; l++)
+  bubbleSortFalling(randomArray, 10);
+  for (int k = 1; k < 10; k++)
   {
-    cout << sortedFalling[l] << ' ';
+    cout << randomArray[k] << ' ';
   }
   
-  cout << '\n';
-
+  
   return 0;
 }
