@@ -1,43 +1,30 @@
-#include <iostream>
-using namespace std;
-
-/**
- * @param array Array of randomized numbers
- * @param len Length of the array given on initialization
- * @return Array of sorted numbers, from the lowest to highest
-*/
-int* bubbleSortRising(int* array, const int len) {
-  for (int i = 0; i < len; i++)
+template <class T>
+// Napisana dla różnych typów zmiennych
+void bubbleSortRising(T array[], size_t size) {
+  for (size_t i = size; i > 0; i--)
   {
-    for (int j = 0; j < len; j++)
+    for (size_t j = 0; j < i-1; j++)
     {
       if (array[j] > array[j+1]) {
-        int tempArray = array[j];
+        T t = array[j];
         array[j] = array[j+1];
-        array[j+1] = tempArray;
+        array[j+1] = t;
       }
-    }
-  }
-  return array;
+    } 
+  } 
 }
 
-/**
- * @param array Array of randomized numbers
- * @param len Length of the array given on initialization
- * @return Array of sorted numbers, from the highest to the lowest
- */
-int* bubbleSortFalling(int* array, const int len) {
-  for (int i = 0; i < len; i++)
+template <class T>
+void bubbleSortFalling(T array[], size_t size) {
+  for (size_t i = size; i > 0; i--)
   {
-    for (int j = 0; j < len; j++)
+    for (size_t j = 0; j < i-1; j++)
     {
       if (array[j] < array[j+1]) {
-        int tempArray = array[j];
+        T t = array[j];
         array[j] = array[j+1];
-        array[j+1] = tempArray;
+        array[j+1] = t;
       }
-    }
-  }
-  return array;
-  
+    } 
+  } 
 }
