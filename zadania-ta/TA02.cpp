@@ -12,11 +12,7 @@ int main() {
 
         cout << i << " - " << (char)i;
 
-        if (i < 100) {
-            cout << "   ";
-        } else {
-            cout << "   ";
-        }
+        cout << "   ";
 
         if (++column >= 7) {
             cout << '\n';
