@@ -2,20 +2,31 @@
 #include <string>
 using namespace std;
 
-int main() {
-  string sentence;
-
-  cout << "Wpisz ciag znakow: ";
-  getline(cin, sentence);
-
-  int digitCount = 0;
-  for (int i = 0; i < sentence.length(); i++)
-  {
-    if (sentence[i] >= '0' && sentence[i] <= '9')
-      digitCount++;
-  }
+string recalculate(int decimal, int system) {
+  string recalculated, chars = "0123456789ABCDEF";
   
-  cout << "\nTwoj ciag znakow zawiera " << digitCount << " cyfr(y).";
+  while (decimal > 0) {
+    recalculated = chars[decimal%system]+recalculated;
+
+    decimal /= system;
+  }
+
+  return recalculated;
+}
+
+int main() {
+
+  int decimal, system;
+
+  cout << "Podaj liczbe w systemie dziesietnym: ";
+  cin >> decimal;
+
+  cout << "\nPodaj system: ";
+  cin >> system;
+
+  string recalculated = recalculate(decimal, system);
+
+  cout << '\n' << recalculated;
 
   return 0;
 }
