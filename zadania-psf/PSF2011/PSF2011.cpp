@@ -46,6 +46,9 @@ int main() {
 		}
 		wynik4a << "Parzyste: " << even << endl;
 		wynik4a << "Nieparzyste: " << 200-even << endl;
+
+		read.close();
+		wynik4a.close();
 	}
 
 	// Zadanie B
@@ -62,6 +65,9 @@ int main() {
 			if (isPalindromic(current))
 				wynik4b << current << endl;
 		}
+
+		read.close();
+		wynik4b.close();
 	}
 
 	// Zadanie C
@@ -80,8 +86,8 @@ int main() {
 				if (current[j]+current[j+1] == 220)
 					wynik4c << current << endl;
 			}
-			
 		}
-		
+		read.close();
+		wynik4c.close();
 	}
 }
