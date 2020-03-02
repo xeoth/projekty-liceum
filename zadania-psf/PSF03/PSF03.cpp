@@ -3,24 +3,39 @@
 #include <string>
 using namespace std;
 
+bool isPalindromic(string current) {
+	int counter = current.size()-1;
+
+	for (int i = 0; i < current.size(); i++)
+	{
+		if (current[i] != current[counter])
+			return false;
+		
+		counter--;
+	}
+
+	return true;
+}
+
 int main() {
 	
-	fstream read, wynik4a, wynik4b, wynik4c;
+	fstream wynik4a, wynik4b, wynik4c;
 	
-	// Otwieranie pliku z has³ami
-	read.open("hasla.txt", ios::in);
-	
-	// Otwieranie plików z wynikami
+	// Otwieranie plikï¿½w z wynikami
 	wynik4a.open("wynik4a.txt", ios::out);
 	wynik4b.open("wynik4b.txt", ios::out);
 	wynik4c.open("wynik4c.txt", ios::out);
 	
-	// Sprawdzanie poprawnoœci
-	if (read.bad() || wynik4a.bad() || wynik4b.bad() || wynik4c.bad())
+	// Sprawdzanie poprawnoï¿½ci
+	if (wynik4a.bad() || wynik4b.bad() || wynik4c.bad())
 		return 1;
 	
 	// Zadanie 4A
 	{
+		// Otwieranie pliku z hasï¿½ami
+		fstream read;
+		read.open("hasla.txt", ios::in);
+
 		string current;
 		int even = 0;
 		for (int i = 0; i < 200; i++) {
@@ -32,10 +47,21 @@ int main() {
 		wynik4a << "Parzyste: " << even << endl;
 		wynik4a << "Nieparzyste: " << 200-even << endl;
 	}
-	
 
-	
-	
 	// Zadanie 4B
-	
+	{
+		// Otwieranie pliku z hasï¿½ami
+		fstream read;
+		read.open("hasla.txt", ios::in);
+
+		string current;
+
+		for (int i = 0; i < 200; i++) {
+			read >> current;
+
+			if (isPalindromic(current))
+				wynik4b << current << endl;
+		}
+	}
+
 }
