@@ -30,7 +30,7 @@ int main() {
 	if (wynik4a.bad() || wynik4b.bad() || wynik4c.bad())
 		return 1;
 	
-	// Zadanie 4A
+	// Zadanie A
 	{
 		// Otwieranie pliku z has�ami
 		fstream read;
@@ -48,7 +48,7 @@ int main() {
 		wynik4a << "Nieparzyste: " << 200-even << endl;
 	}
 
-	// Zadanie 4B
+	// Zadanie B
 	{
 		// Otwieranie pliku z has�ami
 		fstream read;
@@ -64,4 +64,24 @@ int main() {
 		}
 	}
 
+	// Zadanie C
+	{
+		fstream read;
+		read.open("hasla.txt", ios::in);
+
+		string current;
+
+		for (int i = 0; i < 200; i++)
+		{
+			read >> current;
+
+			for (int j = 0; j < current.size()-2; j++)
+			{
+				if (current[j]+current[j+1] == 220)
+					wynik4c << current << endl;
+			}
+			
+		}
+		
+	}
 }
