@@ -81,9 +81,25 @@ int main() {
   }
 
   // ppkt. d
-  // TODO: ppkt d.
   {
+    fstream read;
+    read.open("napisy.txt", ios::in);
 
+    int count[16]={};
+    for (int i = 2; i < 1000; i++)
+    {
+      string current;
+      read >> current;
+
+      count[current.size()-1]++;
+    }
+
+    write << "d\n";
+
+    for (int j = 1; j < 16; j++)
+    {
+      write << "Ilość napisów " << j+1 << "-znakowych: " << count[j] << '\n';
+    }
   }
 
   return 0;

@@ -1,0 +1,19 @@
+a 504
+b 110
+c tylko 0: 32 tylko 1: 50
+d
+Ilość napisów 2-znakowych: 43
+Ilość napisów 3-znakowych: 38
+Ilość napisów 4-znakowych: 37
+Ilość napisów 5-znakowych: 57
+Ilość napisów 6-znakowych: 53
+Ilość napisów 7-znakowych: 68
+Ilość napisów 8-znakowych: 78
+Ilość napisów 9-znakowych: 103
+Ilość napisów 10-znakowych: 83
+Ilość napisów 11-znakowych: 90
+Ilość napisów 12-znakowych: 86
+Ilość napisów 13-znakowych: 81
+Ilość napisów 14-znakowych: 66
+Ilość napisów 15-znakowych: 59
+Ilość napisów 16-znakowych: 56
