@@ -1,1 +1,2 @@
 6.1 236
+6.2 najmniejsza: 17 największa: 29997
