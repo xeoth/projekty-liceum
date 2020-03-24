@@ -1,2 +1,7 @@
 6.1 236
-6.2 najmniejsza: 17 największa: 29997
+6.2 najmniejsza: 73 największa: 29881
+6.3
+1997 i 1999
+1723 i 1721
+1483 i 1481
+811 i 809

@@ -23,18 +23,6 @@ bool isPrime(int a) {
   return true;
 }
 
-// zwykła metoda zajmująca ~12x więcej czasu:
-// bool isPrimeSlower(int a) {
-//   for (int i = 2; i < a-1; i++)
-//   {
-//     if (a%i == 0)
-//       return false;
-//   }
-
-//   return true;
-  
-// }
-
 int main() {
   
   fstream write;
@@ -56,6 +44,8 @@ int main() {
     }
 
     write << "6.1 " << countPrime << '\n';
+
+    read.close();
     
   }
 
@@ -70,11 +60,12 @@ int main() {
       int current;
       read >> current;
 
-      if (current > biggest)
+      if (current > biggest && isPrime(current))
         biggest = current;
     }
 
-    read.clear();
+    read.close();
+    read.open("dane_6.txt", ios::in);
 
     int smallest = biggest;
     for (int j = 0; j < 2000; j++)
@@ -82,11 +73,36 @@ int main() {
       int current;
       read >> current;
 
-      if (current < smallest)
+      if (current < smallest && isPrime(current))
         smallest = current;
     }
     
     write << "6.2 najmniejsza: " << smallest << " największa: " << biggest << '\n';
+  }
+
+  // ppkt. 3
+  {
+    fstream read;
+    read.open("dane_6.txt", ios::in);
+
+    write << "6.3\n";
+
+    int count = 0, last;
+    for (int i = 0; i < 2000; i++) {
+      int current;
+      read >> current;
+
+      if ((current-last == 2 || last-current == 2)) {
+        if (isPrime(current) && isPrime(last)) {
+          count++;
+          write << current << " i " << last << '\n';
+        }
+      }
+
+      if (isPrime(current))
+        last = current;
+    }
+
   }
   return 0;
 }
