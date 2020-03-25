@@ -1,0 +1,5 @@
+4.1 139
+4.2 1404
+wiersze, dla których suma = 35: 4
+największa suma cyfr w wierszu: 88
+występuje ona 2 razy.
