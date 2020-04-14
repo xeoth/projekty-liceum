@@ -12,64 +12,68 @@ int main()
     fstream write;
     write.open("wynik.txt", ios::out);
 
-    vector<string> words;
+    // ppkt. a
     {
-        fstream read;
-        read.open("dane.txt", ios::in);
-
-        for (int i = 0; i < 1000; i++)
+        vector<string> words;
         {
-            string current;
-            read >> current;
+            fstream read;
+            read.open("dane.txt", ios::in);
 
-            words.push_back(current);
+            for (int i = 0; i < 1000; i++)
+            {
+                string current;
+                read >> current;
+
+                words.push_back(current);
+            }
         }
-    }
-    sort(words.begin(), words.end());
+        sort(words.begin(), words.end());
 
-    map<string, int> wordCounts; // HashMap z liczbami wystąpień
-    // slowo<string>: liczba wystąpień<int>
+        map<string, int> wordCounts; // HashMap z liczbami wystąpień
+        // slowo<string>: liczba wystąpień<int>
 
-    // liczenie wystąpień słów
-    for (int i = 0; i < words.size(); i++)
-    {
-        string current = words[i];
-
-        // sprawdzanie czy słowo jest już w mapie
-        if (wordCounts.find(current) == wordCounts.end())
-            wordCounts[current] = 1;
-        else
-            wordCounts[current]++;
-    }
-
-    write << "a.\n";
-
-    // liczenie ile słów jest powtórzonych
-    int countRepeated = 0;
-    for (auto const &keyval : wordCounts)
-    {
-        if (keyval.second > 1)
-            countRepeated++;
-    }
-
-    write << "Liczba duplikatów: " << countRepeated << '\n';
-
-    // szukanie słowa o największej liczbie wystąpień
-    string mostFrequent;
-    int appearances = 0;
-
-    for (auto const &keyval : wordCounts)
-    {
-        if (keyval.second > appearances)
+        // liczenie wystąpień słów
+        for (int i = 0; i < words.size(); i++)
         {
-            mostFrequent = keyval.first;
-            appearances = keyval.second;
+            string current = words[i];
+
+            // sprawdzanie czy słowo jest już w mapie
+            if (wordCounts.find(current) == wordCounts.end())
+                wordCounts[current] = 1;
+            else
+                wordCounts[current]++;
         }
+
+        write << "a.\n";
+
+        // liczenie ile słów jest powtórzonych
+        int countRepeated = 0;
+        for (auto const &keyval : wordCounts)
+        {
+            if (keyval.second > 1)
+                countRepeated++;
+        }
+
+        write << "Liczba duplikatów: " << countRepeated << '\n';
+
+        // szukanie słowa o największej liczbie wystąpień
+        string mostFrequent;
+        int appearances = 0;
+
+        for (auto const &keyval : wordCounts)
+        {
+            if (keyval.second > appearances)
+            {
+                mostFrequent = keyval.first;
+                appearances = keyval.second;
+            }
+        }
+
+        write << "Najczęściej występujące słowo to \""
+              << mostFrequent << "\" i występuje ono "
+              << appearances << " razy.";
     }
 
-    write << "Najczęściej występujące słowo to \""
-          << mostFrequent << "\" i występuje ono "
-          << appearances << " razy.";
-
+    
     return 0;
 }
