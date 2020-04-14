@@ -1,0 +1,3 @@
+a.
+Liczba duplikatów: 21
+Najczęściej występujące słowo to "EBFAABCCBD" i występuje ono 30 razy.
