@@ -74,6 +74,32 @@ int main()
               << appearances << " razy.";
     }
 
-    
+    write << "\n---\n\nb.\n";
+
+    // ppkt. b
+    {
+        fstream read;
+        read.open("dane.txt", ios::in);
+
+        int countEven = 0;
+        for (int i = 0; i < 1000; i++)
+        {
+            string current;
+            read >> current;
+
+            switch (current[current.size() - 1])
+            {
+            case 'A':
+            case 'C':
+            case 'E':
+                countEven++;
+                break;
+            default:
+                break;
+            }
+        }
+
+        write << "Ilość liczb parzystych: " << countEven << "\n---\n\n";
+    }
     return 0;
 }
