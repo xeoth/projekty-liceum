@@ -101,5 +101,26 @@ int main()
 
         write << "Ilość liczb parzystych: " << countEven << "\n---\n\n";
     }
+
+    // ppkt. c
+    {
+        fstream read;
+        read.open("dane.txt", ios::in);
+
+        int countPalindromes = 0;
+        for (int i = 0; i < 1000; i++)
+        {
+            string current;
+            read >> current;
+
+            if (current == string(current.rbegin(), current.rend()))
+                countPalindromes++;
+        }
+
+        write << "c.\nLiczba palindromów: " << countPalindromes << "\n---";
+    }
+
+    write.close();
+
     return 0;
 }

@@ -5,3 +5,8 @@ Najczęściej występujące słowo to "EBFAABCCBD" i występuje ono 30 razy.
 
 b.
 Ilość liczb parzystych: 483
+---
+
+c.
+Liczba palindromów: 20
+---
