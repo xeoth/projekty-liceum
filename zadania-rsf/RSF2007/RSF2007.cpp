@@ -96,11 +96,38 @@ int main()
             }
         }
 
-        cout << "Nr. |    Przedzial    | L. wyst\n"
+        cout << "a." << '\n'
+             << "Nr. |    Przedzial    | L. wyst\n"
              << "----+-----------------+--------\n"
              << "1   |    <2,1000>     | " << countFirst << '\n'
              << "2   |   <100,10000>   | " << countSecond << '\n'
              << "3   |  <1000,100000>  | " << countThird << '\n';
+    }
+
+    cout << "\n\n"
+         << "b."
+         << '\n';
+
+    // ppkt. b
+    {
+        int countPrimes = 0;
+        // <100, 10000>
+        for (int i = 100; i < 10000; i++)
+        {
+            if (isPrime(digitSum(i)))
+                countPrimes++;
+        }
+
+        cout << "Liczb w przedziale <100,10000>, których suma cyfr jest liczbą pierwszą jest " << countPrimes << '\n';
+
+        int sumSuperBPrimes = 0;
+        for (int j = 100; j < 10000; j++)
+        {
+            if (isSuperBPrime(j))
+                sumSuperBPrimes += j;
+        }
+
+        cout << "Czy suma wszystkich liczb \"super B pierwszych\" z przedziału <100,10000> jest liczbą pierwszą? Odp: " << (isPrime(sumSuperBPrimes) ? "tak" : "nie");
     }
 
     return 0;
