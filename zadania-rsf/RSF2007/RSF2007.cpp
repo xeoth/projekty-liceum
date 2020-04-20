@@ -4,12 +4,11 @@
 #include <fstream>
 using namespace std;
 
-// TODO: determine whether 2 is prime or not
 bool isPrime(long num)
 {
     if (num == 2 || num == 3)
         return true;
-    else if (num % 2 == 0 || num % 3 == 0)
+    else if (num < 2 || num % 2 == 0 || num % 3 == 0)
         return false;
 
     int i = 5, w = 2;
