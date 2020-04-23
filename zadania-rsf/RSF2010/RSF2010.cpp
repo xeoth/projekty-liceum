@@ -5,13 +5,20 @@
 #include <algorithm>
 using namespace std;
 
-bool isAnagram(string firstWord, string wordToCheck)
+bool isAnagram(vector<string> &line)
 {
-    vector<char> firstWordVector(firstWord.begin(), firstWord.end());
+    string first = line[0];
+    sort(first.begin(), first.end());
 
-    for (int i = 0; i < wordToCheck.size(); i++)
+    // usuwanie pierwszego elementu
+    line.erase(line.begin());
+
+    // sortowanie pozostałych elementów i sprawdzanie czy są równe pierwszemu
+    for (string val : line)
     {
-        if (find(firstWord.begin(), firstWord.end(), wordToCheck[i]) == firstWord.end())
+        sort(val.begin(), val.end());
+
+        if (val != first)
             return false;
     }
 
@@ -21,10 +28,8 @@ bool isAnagram(string firstWord, string wordToCheck)
 bool areAllSizesEqual(vector<string> &line)
 {
     for (int i = 1; i < 5; i++)
-    {
         if (line[i].size() != line[0].size())
             return false;
-    }
 
     return true;
 }
@@ -75,13 +80,14 @@ int main()
                 line.push_back(current);
             }
 
-            for (int i = 1; i < line.size(); i++)
-                if (isAnagram(line[i], line[0]) && areAllSizesEqual(line))
-                {
-                    for (int k = 0; k < 5; k++)
-                        write4b << line[k] << ' ';
-                    write4b << '\n';
-                }
+            // isAnagram usuwa pierwszy element, więc nie możemy dać tam line
+            vector<string> lineBackup = line;
+            if (isAnagram(lineBackup))
+            {
+                for (string val : line)
+                    write4b << val << ' ';
+                write4b << '\n';
+            }
         }
     }
     return 0;
