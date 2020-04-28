@@ -73,8 +73,7 @@ int main()
 
         write << "c. Ilość liczb 9-cyfrowych: " << nineDigitAmount
               << "; Suma liczb 9-cyfrowych w systemie dwójkowym: "
-              << bitset<16>(nineDigitSum).to_string() << '\n'
-              << nineDigitSum;
+              << bitset<16>(nineDigitSum).to_string() << '\n';
     }
     return 0;
 }
