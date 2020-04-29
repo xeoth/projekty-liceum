@@ -1,0 +1,25 @@
+a. Liczba napisów pierwszych: 122
+b. Napisy rosnące:
+FHJLMU
+BEJNOSY
+MNS
+AEIOUY
+LVV
+HHO
+BDL
+JT
+BJQR
+AHJS
+FHJLMU
+DIT
+CEGKZ
+BCV
+CEGIKOT
+CEGKZ
+c. Napisy występujące więcej niż raz:
+BZYFFLOICLUNWLTH
+CEGKZ
+FHJLMU
+GC
+QULA
+SWIFT
