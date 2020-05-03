@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -46,5 +46,25 @@ int main()
         write << count << '\n';
     }
 
+    // ppkt. 6.3
+    {
+        fstream read;
+        read.open("slowa.txt", ios::in);
+
+        int count = 0;
+        for (int i = 0; i < 1000; i++)
+        {
+            string current[2];
+            read >> current[0] >> current[1];
+
+            sort(current[0].begin(), current[0].end());
+            sort(current[1].begin(), current[1].end());
+
+            if (current[0] == current[1])
+                count++;
+        }
+
+        write << "6.3 " << count << '\n';
+    }
     return 0;
 }
