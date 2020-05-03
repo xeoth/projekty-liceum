@@ -8,7 +8,7 @@ int main()
     fstream write;
     write.open("wyniki6.txt", ios::out);
 
-    // ppkt. a
+    // ppkt. 6.1
     {
         fstream read;
         read.open("slowa.txt", ios::in);
@@ -24,6 +24,26 @@ int main()
         }
 
         write << "6.1 " << count << '\n';
+    }
+
+    // ppkt. 6.2
+    {
+        write << "6.2 ";
+
+        fstream read;
+        read.open("slowa.txt", ios::in);
+
+        int count = 0;
+        for (int i = 0; i < 1000; i++)
+        {
+            string current[2];
+            read >> current[0] >> current[1];
+
+            if (current[1].find(current[0]) != string::npos)
+                count++;
+        }
+
+        write << count << '\n';
     }
 
     return 0;
