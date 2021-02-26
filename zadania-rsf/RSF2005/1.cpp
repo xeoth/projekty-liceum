@@ -25,7 +25,7 @@ int algo(vector<int> data)
   return max;
 }
 
-int main()
+int first()
 {
   int max = 0, maxLocal = 0;
 

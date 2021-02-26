@@ -25,7 +25,7 @@ int mostFrequentElement(vector<int> &data)
   return mostFrequentElement;
 }
 
-int main()
+int second()
 {
   fstream readOne, readTwo, readThree;
   vector<int> data;
