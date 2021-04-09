@@ -1,0 +1,2 @@
+Miasto z najwieksza powierzchnia: Essen, 4760
+Miasto z najmniejsza powierzchnia: Wilno, 1620
