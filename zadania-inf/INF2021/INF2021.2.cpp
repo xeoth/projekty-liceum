@@ -11,7 +11,6 @@ int main() {
     fstream read, write;
     read.open("dane6.txt", ios::in);
     write.open("zadanie6_2.txt", ios::out);
-
     string bases[10]{};
     int sums[10]{};
 
